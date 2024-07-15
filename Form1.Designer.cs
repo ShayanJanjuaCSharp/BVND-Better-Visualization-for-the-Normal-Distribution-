@@ -99,6 +99,7 @@
             button1.TabIndex = 4;
             button1.Text = "HYPOTHESIS TESTING FOR A CORRELATION";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
