@@ -28,31 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            ((System.ComponentModel.ISupportInitialize)chart1).BeginInit();
+            label1 = new Label();
+            button1 = new Button();
+            button2 = new Button();
+            button3 = new Button();
             SuspendLayout();
             // 
-            // chart1
+            // label1
             // 
-            chartArea1.Name = "ChartArea1";
-            chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            chart1.Legends.Add(legend1);
-            chart1.Location = new Point(489, 128);
-            chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            series1.YValuesPerPoint = 2;
-            chart1.Series.Add(series1);
-            chart1.Size = new Size(543, 376);
-            chart1.TabIndex = 0;
-            chart1.Text = "chart1";
-            chart1.Click += chart1_Click;
+            label1.AutoSize = true;
+            label1.Font = new Font("Times New Roman", 30F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.Honeydew;
+            label1.Location = new Point(12, 18);
+            label1.Name = "label1";
+            label1.Size = new Size(633, 45);
+            label1.TabIndex = 3;
+            label1.Text = "Hypothesis Testing for a Correlation";
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.Honeydew;
+            button1.Font = new Font("Georgia", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.ForeColor = Color.DarkSlateGray;
+            button1.Location = new Point(993, 18);
+            button1.Name = "button1";
+            button1.Size = new Size(39, 35);
+            button1.TabIndex = 4;
+            button1.Text = "X";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.Honeydew;
+            button2.Font = new Font("Times New Roman", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.ForeColor = Color.DarkSlateGray;
+            button2.Location = new Point(222, 227);
+            button2.Name = "button2";
+            button2.Size = new Size(158, 131);
+            button2.TabIndex = 5;
+            button2.Text = "PMCC Given";
+            button2.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.Honeydew;
+            button3.Font = new Font("Times New Roman", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.ForeColor = Color.DarkSlateGray;
+            button3.Location = new Point(628, 227);
+            button3.Name = "button3";
+            button3.Size = new Size(158, 131);
+            button3.TabIndex = 6;
+            button3.Text = "Data Points Given";
+            button3.UseVisualStyleBackColor = false;
             // 
             // PMCCForm
             // 
@@ -60,16 +88,21 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkSlateGray;
             ClientSize = new Size(1067, 601);
-            Controls.Add(chart1);
+            Controls.Add(button3);
+            Controls.Add(button2);
+            Controls.Add(button1);
+            Controls.Add(label1);
             Name = "PMCCForm";
             Text = "PMCCForm";
             Load += PMCCForm_Load;
-            ((System.ComponentModel.ISupportInitialize)chart1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private Label label1;
+        private Button button1;
+        private Button button2;
+        private Button button3;
     }
 }

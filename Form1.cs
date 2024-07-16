@@ -1,3 +1,5 @@
+using System.Security.Cryptography.X509Certificates;
+
 namespace BVND
 {
     public partial class Form1 : Form
@@ -40,7 +42,11 @@ namespace BVND
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            this.Visible = false;
+            PMCCForm pmcc = new PMCCForm();
+            pmcc.ShowDialog();
+            pmcc = null;
+            this.Visible = true;
         }
     }
 }
