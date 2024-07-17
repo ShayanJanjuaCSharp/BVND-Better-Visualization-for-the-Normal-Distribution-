@@ -8,23 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BVND
+namespace BVND.UserControls
 {
-    public partial class PMCCForm : Form
+    public partial class PMCCMenu : UserControl
     {
-        public PMCCForm()
+        public PMCCMenu()
         {
             InitializeComponent();
         }
 
-        private void chart1_Click(object sender, EventArgs e)
+        private void back_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void PMCCForm_Load(object sender, EventArgs e)
-        {
-
+            MainMenu mainMenu = new MainMenu();
+            this.Controls.Clear(); 
+            this.Controls.Add(mainMenu);
         }
     }
 }
