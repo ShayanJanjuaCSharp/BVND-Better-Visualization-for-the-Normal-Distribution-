@@ -57,6 +57,7 @@
             PMCC_Given.TabIndex = 4;
             PMCC_Given.Text = "PMCC Given";
             PMCC_Given.UseVisualStyleBackColor = false;
+            PMCC_Given.Click += PMCC_Given_Click;
             // 
             // button1
             // 

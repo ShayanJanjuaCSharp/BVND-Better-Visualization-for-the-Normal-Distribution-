@@ -10,25 +10,24 @@ using System.Windows.Forms;
 
 namespace BVND.UserControls
 {
-    public partial class PMCCMenu : UserControl
+    public partial class PMCCGiven : UserControl
     {
-        public PMCCMenu()
+        public PMCCGiven()
         {
             InitializeComponent();
+            float[,] PMCCTable = new float[ 5,37];
         }
 
         private void back_Click(object sender, EventArgs e)
         {
-            MainMenu mainMenu = new MainMenu();
+            PMCCMenu pmccmenu = new PMCCMenu();
             this.Controls.Clear();
-            this.Controls.Add(mainMenu);
+            this.Controls.Add(pmccmenu);
         }
 
-        private void PMCC_Given_Click(object sender, EventArgs e)
+        private void PMCCGiven_Load(object sender, EventArgs e)
         {
-            PMCCGiven pmccgiven = new PMCCGiven();
-            this.Controls.Clear();
-            this.Controls.Add(pmccgiven);
+
         }
     }
 }
