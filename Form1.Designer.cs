@@ -91,7 +91,6 @@
             // 
             button1.BackColor = Color.Honeydew;
             button1.FlatAppearance.BorderColor = Color.DarkSlateGray;
-            button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Times New Roman", 13F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = Color.DarkSlateGray;
             button1.Location = new Point(47, 329);
@@ -105,11 +104,9 @@
             // button2
             // 
             button2.BackColor = Color.Honeydew;
-            button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Times New Roman", 13F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = Color.DarkSlateGray;
             button2.Location = new Point(47, 191);
-            button2.Margin = new Padding(0);
             button2.Name = "button2";
             button2.Size = new Size(279, 61);
             button2.TabIndex = 5;
@@ -119,7 +116,6 @@
             // button3
             // 
             button3.BackColor = Color.Honeydew;
-            button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("Times New Roman", 13F, FontStyle.Bold, GraphicsUnit.Point);
             button3.ForeColor = Color.DarkSlateGray;
             button3.Location = new Point(47, 258);
@@ -134,7 +130,6 @@
             // 
             button5.BackColor = Color.Honeydew;
             button5.FlatAppearance.BorderColor = Color.DarkSlateGray;
-            button5.FlatStyle = FlatStyle.Flat;
             button5.Font = new Font("Times New Roman", 13F, FontStyle.Bold, GraphicsUnit.Point);
             button5.ForeColor = Color.DarkSlateGray;
             button5.Location = new Point(47, 399);
@@ -149,7 +144,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkSlateGray;
-            ClientSize = new Size(1073, 547);
+            ClientSize = new Size(1159, 570);
             Controls.Add(button5);
             Controls.Add(button3);
             Controls.Add(button2);
@@ -158,6 +153,7 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            Cursor = Cursors.Default;
             ForeColor = SystemColors.ButtonHighlight;
             Name = "Form1";
             Text = "Form1";
