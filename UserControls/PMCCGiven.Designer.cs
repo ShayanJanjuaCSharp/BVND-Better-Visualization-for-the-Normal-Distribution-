@@ -28,17 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint1 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, "0,-0.56");
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint2 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, "-0.56,-1");
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint3 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, "-0.24,-0.26,0,0,0,0");
             PMCC_TITLE = new Label();
             back = new Button();
-            label1 = new Label();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
-            label2 = new Label();
-            label3 = new Label();
-            comboBox3 = new ComboBox();
-            label4 = new Label();
-            textBox1 = new TextBox();
+            SampleSizeText = new Label();
+            SampleBox = new ComboBox();
+            slBox = new ComboBox();
+            Significanceleveltext = new Label();
+            Lessthanorgreatertext = new Label();
+            LGCBox = new ComboBox();
+            PMCCGivenrtext = new Label();
+            RBox = new TextBox();
             Confirm_Button = new Button();
+            chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            ((System.ComponentModel.ISupportInitialize)chart1).BeginInit();
             SuspendLayout();
             // 
             // PMCC_TITLE
@@ -66,98 +76,98 @@
             back.UseVisualStyleBackColor = false;
             back.Click += back_Click;
             // 
-            // label1
+            // SampleSizeText
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Times New Roman", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.Honeydew;
-            label1.Location = new Point(26, 184);
-            label1.Name = "label1";
-            label1.Size = new Size(182, 31);
-            label1.TabIndex = 8;
-            label1.Text = "Sample Size, n";
+            SampleSizeText.AutoSize = true;
+            SampleSizeText.Font = new Font("Times New Roman", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            SampleSizeText.ForeColor = Color.Honeydew;
+            SampleSizeText.Location = new Point(26, 184);
+            SampleSizeText.Name = "SampleSizeText";
+            SampleSizeText.Size = new Size(182, 31);
+            SampleSizeText.TabIndex = 8;
+            SampleSizeText.Text = "Sample Size, n";
             // 
-            // comboBox1
+            // SampleBox
             // 
-            comboBox1.BackColor = Color.Honeydew;
-            comboBox1.FlatStyle = FlatStyle.Flat;
-            comboBox1.Font = new Font("Times New Roman", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            comboBox1.ForeColor = Color.DarkSlateGray;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "40", "50", "60", "70", "80", "90", "100" });
-            comboBox1.Location = new Point(230, 181);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(80, 39);
-            comboBox1.TabIndex = 9;
+            SampleBox.BackColor = Color.Honeydew;
+            SampleBox.FlatStyle = FlatStyle.Flat;
+            SampleBox.Font = new Font("Times New Roman", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            SampleBox.ForeColor = Color.DarkSlateGray;
+            SampleBox.FormattingEnabled = true;
+            SampleBox.Items.AddRange(new object[] { "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "40", "50", "60", "70", "80", "90", "100" });
+            SampleBox.Location = new Point(230, 181);
+            SampleBox.Name = "SampleBox";
+            SampleBox.Size = new Size(80, 39);
+            SampleBox.TabIndex = 9;
             // 
-            // comboBox2
+            // slBox
             // 
-            comboBox2.BackColor = Color.Honeydew;
-            comboBox2.FlatStyle = FlatStyle.Flat;
-            comboBox2.Font = new Font("Times New Roman", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            comboBox2.ForeColor = Color.DarkSlateGray;
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "0.10", "0.05", "0.025", "0.01", "0.005" });
-            comboBox2.Location = new Point(299, 248);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(80, 39);
-            comboBox2.TabIndex = 11;
+            slBox.BackColor = Color.Honeydew;
+            slBox.FlatStyle = FlatStyle.Flat;
+            slBox.Font = new Font("Times New Roman", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            slBox.ForeColor = Color.DarkSlateGray;
+            slBox.FormattingEnabled = true;
+            slBox.Items.AddRange(new object[] { "0.10", "0.05", "0.025", "0.01", "0.005" });
+            slBox.Location = new Point(299, 248);
+            slBox.Name = "slBox";
+            slBox.Size = new Size(80, 39);
+            slBox.TabIndex = 11;
             // 
-            // label2
+            // Significanceleveltext
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Times New Roman", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.Honeydew;
-            label2.Location = new Point(26, 256);
-            label2.Name = "label2";
-            label2.Size = new Size(267, 31);
-            label2.TabIndex = 10;
-            label2.Text = "Siginificance Level, sl";
+            Significanceleveltext.AutoSize = true;
+            Significanceleveltext.Font = new Font("Times New Roman", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            Significanceleveltext.ForeColor = Color.Honeydew;
+            Significanceleveltext.Location = new Point(26, 256);
+            Significanceleveltext.Name = "Significanceleveltext";
+            Significanceleveltext.Size = new Size(267, 31);
+            Significanceleveltext.TabIndex = 10;
+            Significanceleveltext.Text = "Siginificance Level, sl";
             // 
-            // label3
+            // Lessthanorgreatertext
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Times New Roman", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = Color.Honeydew;
-            label3.Location = new Point(26, 340);
-            label3.Name = "label3";
-            label3.Size = new Size(421, 31);
-            label3.TabIndex = 12;
-            label3.Text = "Less than, Greater than or Change";
+            Lessthanorgreatertext.AutoSize = true;
+            Lessthanorgreatertext.Font = new Font("Times New Roman", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            Lessthanorgreatertext.ForeColor = Color.Honeydew;
+            Lessthanorgreatertext.Location = new Point(26, 340);
+            Lessthanorgreatertext.Name = "Lessthanorgreatertext";
+            Lessthanorgreatertext.Size = new Size(421, 31);
+            Lessthanorgreatertext.TabIndex = 12;
+            Lessthanorgreatertext.Text = "Less than, Greater than or Change";
             // 
-            // comboBox3
+            // LGCBox
             // 
-            comboBox3.BackColor = Color.Honeydew;
-            comboBox3.FlatStyle = FlatStyle.Flat;
-            comboBox3.Font = new Font("Times New Roman", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            comboBox3.ForeColor = Color.DarkSlateGray;
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Items.AddRange(new object[] { "<0", ">0", "≠0" });
-            comboBox3.Location = new Point(453, 340);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(80, 39);
-            comboBox3.TabIndex = 13;
+            LGCBox.BackColor = Color.Honeydew;
+            LGCBox.FlatStyle = FlatStyle.Flat;
+            LGCBox.Font = new Font("Times New Roman", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            LGCBox.ForeColor = Color.DarkSlateGray;
+            LGCBox.FormattingEnabled = true;
+            LGCBox.Items.AddRange(new object[] { "<0", ">0", "≠0" });
+            LGCBox.Location = new Point(453, 340);
+            LGCBox.Name = "LGCBox";
+            LGCBox.Size = new Size(80, 39);
+            LGCBox.TabIndex = 13;
             // 
-            // label4
+            // PMCCGivenrtext
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Times New Roman", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.ForeColor = Color.Honeydew;
-            label4.Location = new Point(26, 433);
-            label4.Name = "label4";
-            label4.Size = new Size(173, 31);
-            label4.TabIndex = 14;
-            label4.Text = "PMCC Given";
+            PMCCGivenrtext.AutoSize = true;
+            PMCCGivenrtext.Font = new Font("Times New Roman", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            PMCCGivenrtext.ForeColor = Color.Honeydew;
+            PMCCGivenrtext.Location = new Point(26, 433);
+            PMCCGivenrtext.Name = "PMCCGivenrtext";
+            PMCCGivenrtext.Size = new Size(199, 31);
+            PMCCGivenrtext.TabIndex = 14;
+            PMCCGivenrtext.Text = "PMCC Given, r";
             // 
-            // textBox1
+            // RBox
             // 
-            textBox1.BackColor = Color.Honeydew;
-            textBox1.Font = new Font("Times New Roman", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox1.ForeColor = Color.DarkSlateGray;
-            textBox1.Location = new Point(230, 430);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(128, 39);
-            textBox1.TabIndex = 15;
+            RBox.BackColor = Color.Honeydew;
+            RBox.Font = new Font("Times New Roman", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            RBox.ForeColor = Color.DarkSlateGray;
+            RBox.Location = new Point(230, 430);
+            RBox.Name = "RBox";
+            RBox.Size = new Size(128, 39);
+            RBox.TabIndex = 15;
             // 
             // Confirm_Button
             // 
@@ -171,26 +181,92 @@
             Confirm_Button.TabIndex = 16;
             Confirm_Button.Text = "Confirm";
             Confirm_Button.UseVisualStyleBackColor = false;
+            Confirm_Button.Click += Confirm_Button_Click;
+            // 
+            // chart1
+            // 
+            chart1.BackColor = Color.DarkSlateGray;
+            chart1.BorderlineColor = Color.Honeydew;
+            chartArea1.AxisX.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
+            chartArea1.AxisX.InterlacedColor = Color.DarkGray;
+            chartArea1.AxisX.LabelStyle.ForeColor = Color.MintCream;
+            chartArea1.AxisX.LineColor = Color.Honeydew;
+            chartArea1.AxisX.MajorGrid.Enabled = false;
+            chartArea1.AxisX.MajorGrid.LineColor = Color.Honeydew;
+            chartArea1.AxisX.ScaleBreakStyle.LineColor = Color.MintCream;
+            chartArea1.AxisX.TitleForeColor = Color.Honeydew;
+            chartArea1.AxisX2.LineColor = Color.Honeydew;
+            chartArea1.AxisY.LabelStyle.ForeColor = Color.Honeydew;
+            chartArea1.AxisY.LineColor = Color.Honeydew;
+            chartArea1.AxisY.MajorGrid.LineColor = Color.Honeydew;
+            chartArea1.AxisY.MinorGrid.Enabled = true;
+            chartArea1.AxisY.MinorGrid.LineColor = Color.PowderBlue;
+            chartArea1.AxisY2.LineColor = Color.Honeydew;
+            chartArea1.BackColor = Color.DarkSlateGray;
+            chartArea1.BorderColor = Color.Honeydew;
+            chartArea1.Name = "ChartArea1";
+            chartArea1.ShadowColor = Color.White;
+            chart1.ChartAreas.Add(chartArea1);
+            legend1.BackColor = Color.Honeydew;
+            legend1.Font = new Font("Times New Roman", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            legend1.ForeColor = Color.DarkSlateGray;
+            legend1.IsTextAutoFit = false;
+            legend1.Name = "Legend1";
+            chart1.Legends.Add(legend1);
+            chart1.Location = new Point(614, 204);
+            chart1.Name = "chart1";
+            chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
+            series1.BackSecondaryColor = Color.DarkSlateGray;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.RangeBar;
+            series1.Color = Color.Wheat;
+            series1.LabelForeColor = Color.Honeydew;
+            series1.Legend = "Legend1";
+            series1.Name = "Non Critical Reqion";
+            series1.Points.Add(dataPoint1);
+            series1.YValuesPerPoint = 2;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.RangeBar;
+            series2.Color = Color.Peru;
+            series2.Legend = "Legend1";
+            series2.Name = "Critical Region";
+            series2.Points.Add(dataPoint2);
+            series2.YValuesPerPoint = 2;
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.RangeBar;
+            series3.Color = Color.Yellow;
+            series3.Legend = "Legend1";
+            series3.Name = "PMCC Given";
+            series3.Points.Add(dataPoint3);
+            series3.YValuesPerPoint = 6;
+            chart1.Series.Add(series1);
+            chart1.Series.Add(series2);
+            chart1.Series.Add(series3);
+            chart1.Size = new Size(591, 260);
+            chart1.TabIndex = 17;
+            chart1.Text = "chart1";
             // 
             // PMCCGiven
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkSlateGray;
+            Controls.Add(chart1);
             Controls.Add(Confirm_Button);
-            Controls.Add(textBox1);
-            Controls.Add(label4);
-            Controls.Add(comboBox3);
-            Controls.Add(label3);
-            Controls.Add(comboBox2);
-            Controls.Add(label2);
-            Controls.Add(comboBox1);
-            Controls.Add(label1);
+            Controls.Add(RBox);
+            Controls.Add(PMCCGivenrtext);
+            Controls.Add(LGCBox);
+            Controls.Add(Lessthanorgreatertext);
+            Controls.Add(slBox);
+            Controls.Add(Significanceleveltext);
+            Controls.Add(SampleBox);
+            Controls.Add(SampleSizeText);
             Controls.Add(back);
             Controls.Add(PMCC_TITLE);
             Name = "PMCCGiven";
             Size = new Size(1280, 720);
             Load += PMCCGiven_Load;
+            ((System.ComponentModel.ISupportInitialize)chart1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -199,14 +275,15 @@
 
         private Label PMCC_TITLE;
         private Button back;
-        private Label label1;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
-        private Label label2;
-        private Label label3;
-        private ComboBox comboBox3;
-        private Label label4;
-        private TextBox textBox1;
+        private Label SampleSizeText;
+        private ComboBox SampleBox;
+        private ComboBox slBox;
+        private Label Significanceleveltext;
+        private Label Lessthanorgreatertext;
+        private ComboBox LGCBox;
+        private Label PMCCGivenrtext;
+        private TextBox RBox;
         private Button Confirm_Button;
+        public System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }
