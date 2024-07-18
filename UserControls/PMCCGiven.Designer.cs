@@ -38,6 +38,7 @@
             comboBox3 = new ComboBox();
             label4 = new Label();
             textBox1 = new TextBox();
+            Confirm_Button = new Button();
             SuspendLayout();
             // 
             // PMCC_TITLE
@@ -79,6 +80,7 @@
             // comboBox1
             // 
             comboBox1.BackColor = Color.Honeydew;
+            comboBox1.FlatStyle = FlatStyle.Flat;
             comboBox1.Font = new Font("Times New Roman", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
             comboBox1.ForeColor = Color.DarkSlateGray;
             comboBox1.FormattingEnabled = true;
@@ -91,6 +93,7 @@
             // comboBox2
             // 
             comboBox2.BackColor = Color.Honeydew;
+            comboBox2.FlatStyle = FlatStyle.Flat;
             comboBox2.Font = new Font("Times New Roman", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
             comboBox2.ForeColor = Color.DarkSlateGray;
             comboBox2.FormattingEnabled = true;
@@ -125,6 +128,7 @@
             // comboBox3
             // 
             comboBox3.BackColor = Color.Honeydew;
+            comboBox3.FlatStyle = FlatStyle.Flat;
             comboBox3.Font = new Font("Times New Roman", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
             comboBox3.ForeColor = Color.DarkSlateGray;
             comboBox3.FormattingEnabled = true;
@@ -155,11 +159,25 @@
             textBox1.Size = new Size(128, 39);
             textBox1.TabIndex = 15;
             // 
+            // Confirm_Button
+            // 
+            Confirm_Button.BackColor = Color.Honeydew;
+            Confirm_Button.FlatStyle = FlatStyle.Flat;
+            Confirm_Button.Font = new Font("Times New Roman", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
+            Confirm_Button.ForeColor = Color.DarkSlateGray;
+            Confirm_Button.Location = new Point(26, 554);
+            Confirm_Button.Name = "Confirm_Button";
+            Confirm_Button.Size = new Size(173, 50);
+            Confirm_Button.TabIndex = 16;
+            Confirm_Button.Text = "Confirm";
+            Confirm_Button.UseVisualStyleBackColor = false;
+            // 
             // PMCCGiven
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkSlateGray;
+            Controls.Add(Confirm_Button);
             Controls.Add(textBox1);
             Controls.Add(label4);
             Controls.Add(comboBox3);
@@ -189,5 +207,6 @@
         private ComboBox comboBox3;
         private Label label4;
         private TextBox textBox1;
+        private Button Confirm_Button;
     }
 }
