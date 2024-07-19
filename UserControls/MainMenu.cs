@@ -21,6 +21,14 @@ namespace BVND.UserControls
         {
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             AutoScaleMode = AutoScaleMode.Dpi;
+            string dir = @"C:\BVNDDataFiles";
+
+            if (!Directory.Exists(dir))
+            {
+                Directory.CreateDirectory(dir);
+            }
+            File.Create(@"c:\BVNDDataFiles\PMCCGivenData.json");
+            File.Create(@"c:\BVNDDataFiles\DataGivenData.json");
         }
 
         private void button1_Click(object sender, EventArgs e)

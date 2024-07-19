@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.StripLine stripLine1 = new System.Windows.Forms.DataVisualization.Charting.StripLine();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint1 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, "0,-0.56");
@@ -189,21 +190,33 @@
             chart1.BorderlineColor = Color.Honeydew;
             chartArea1.AxisX.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
             chartArea1.AxisX.InterlacedColor = Color.DarkGray;
-            chartArea1.AxisX.LabelStyle.ForeColor = Color.MintCream;
-            chartArea1.AxisX.LineColor = Color.Honeydew;
+            chartArea1.AxisX.LabelStyle.ForeColor = Color.DarkSlateGray;
+            chartArea1.AxisX.LineColor = Color.DarkSlateGray;
             chartArea1.AxisX.MajorGrid.Enabled = false;
             chartArea1.AxisX.MajorGrid.LineColor = Color.Honeydew;
+            chartArea1.AxisX.MajorTickMark.Enabled = false;
             chartArea1.AxisX.ScaleBreakStyle.LineColor = Color.MintCream;
-            chartArea1.AxisX.TitleForeColor = Color.Honeydew;
-            chartArea1.AxisX2.LineColor = Color.Honeydew;
+            chartArea1.AxisX.TitleForeColor = Color.DarkSlateGray;
+            chartArea1.AxisX2.LineColor = Color.DarkSeaGreen;
             chartArea1.AxisY.LabelStyle.ForeColor = Color.Honeydew;
             chartArea1.AxisY.LineColor = Color.Honeydew;
+            chartArea1.AxisY.MajorGrid.Enabled = false;
             chartArea1.AxisY.MajorGrid.LineColor = Color.Honeydew;
+            chartArea1.AxisY.MajorTickMark.Enabled = false;
+            chartArea1.AxisY.Minimum = -1D;
             chartArea1.AxisY.MinorGrid.Enabled = true;
-            chartArea1.AxisY.MinorGrid.LineColor = Color.PowderBlue;
+            chartArea1.AxisY.MinorGrid.LineColor = Color.FromArgb(0, 64, 0);
+            stripLine1.BackColor = Color.FromArgb(192, 255, 192);
+            stripLine1.ForeColor = Color.WhiteSmoke;
+            stripLine1.StripWidth = 0.01D;
+            stripLine1.Text = "y";
+            chartArea1.AxisY.StripLines.Add(stripLine1);
             chartArea1.AxisY2.LineColor = Color.Honeydew;
             chartArea1.BackColor = Color.DarkSlateGray;
             chartArea1.BorderColor = Color.Honeydew;
+            chartArea1.CursorX.Interval = 0.001D;
+            chartArea1.CursorX.LineColor = Color.Aqua;
+            chartArea1.CursorY.Interval = 0.001D;
             chartArea1.Name = "ChartArea1";
             chartArea1.ShadowColor = Color.White;
             chart1.ChartAreas.Add(chartArea1);
@@ -234,7 +247,7 @@
             series2.YValuesPerPoint = 2;
             series3.ChartArea = "ChartArea1";
             series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.RangeBar;
-            series3.Color = Color.Yellow;
+            series3.Color = Color.Aqua;
             series3.Legend = "Legend1";
             series3.Name = "PMCC Given";
             series3.Points.Add(dataPoint3);
