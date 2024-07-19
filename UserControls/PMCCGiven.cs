@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualBasic.Devices;
+﻿using BVND.Classes;
+using Microsoft.VisualBasic.Devices;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -14,14 +15,6 @@ namespace BVND.UserControls
 {
     public partial class PMCCGiven : UserControl
     {
-        public class Data
-        {
-            public Double r;
-            public Double sl;
-            public int sample;
-            public Double cv;
-            public int lgc;
-        }
 
         public PMCCGiven()
         {
@@ -68,7 +61,7 @@ namespace BVND.UserControls
                 crit = -crit;
             }
 
-            Data trdata = new Data();
+            PMCCGivenData trdata = new PMCCGivenData();
             trdata.r = r;
             trdata.sl = slBox.SelectedIndex;
             trdata.cv = crit;
