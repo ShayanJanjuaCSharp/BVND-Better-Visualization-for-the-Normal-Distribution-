@@ -26,9 +26,19 @@ namespace BVND.UserControls
             if (!Directory.Exists(dir))
             {
                 Directory.CreateDirectory(dir);
+                Directory.CreateDirectory(@"c:\BVNDDataFiles\PMCC");
             }
-            File.Create(@"c:\BVNDDataFiles\PMCCGivenData.json");
-            File.Create(@"c:\BVNDDataFiles\DataGivenData.json");
+
+            if (!File.Exists(@"c:\BVNDDataFiles\PMCC\PMCCGivenData.json"))
+            {
+                File.Create(@"c:\BVNDDataFiles\PMCC\PMCCGivenData.json");
+            }
+            
+            if (!File.Exists(@"c:\BVNDDataFiles\PMCC\DataGivenData.json"))
+            {
+                File.Create(@"c:\BVNDDataFiles\PMCC\DataGivenData.json");
+            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)

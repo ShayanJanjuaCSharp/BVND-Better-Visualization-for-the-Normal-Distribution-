@@ -56,10 +56,6 @@ namespace BVND.UserControls
             }
 
             Double r = Convert.ToDouble(RBox.Text);
-            if (r < 0)
-            {
-                crit = -crit;
-            }
 
             PMCCGivenData trdata = new PMCCGivenData();
             trdata.r = r;
@@ -68,7 +64,7 @@ namespace BVND.UserControls
             trdata.sample = SampleBox.SelectedIndex;
             trdata.lgc = LGCBox.SelectedIndex;
 
-            File.WriteAllText(@"c:\BVNDDataFiles\PMCCGivenData.json", JsonConvert.SerializeObject(trdata));
+            File.WriteAllText(@"c:\BVNDDataFiles\PMCC\PMCCGivenData.json", JsonConvert.SerializeObject(trdata));
         }
 
     }
