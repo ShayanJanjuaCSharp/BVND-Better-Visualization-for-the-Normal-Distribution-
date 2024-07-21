@@ -1,4 +1,5 @@
 ﻿using BVND.Classes;
+using BVND.UserControls.PMCC_Controls.PMCCGivenSteps;
 using Microsoft.VisualBasic.Devices;
 using Newtonsoft.Json;
 using System;
@@ -65,6 +66,10 @@ namespace BVND.UserControls
             trdata.lgc = LGCBox.SelectedIndex;
 
             File.WriteAllText(@"c:\BVNDDataFiles\PMCC\PMCCGivenData.json", JsonConvert.SerializeObject(trdata));
+
+            PMCCStep1 nextPage = new PMCCStep1();
+            this.Controls.Clear();
+            this.Controls.Add(nextPage);
         }
 
     }

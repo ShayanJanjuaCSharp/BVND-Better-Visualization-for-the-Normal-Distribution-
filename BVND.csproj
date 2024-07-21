@@ -13,4 +13,8 @@
     <PackageReference Include="WinForms.DataVisualization" Version="1.9.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="UserControls\PMCC Controls\DataGivenSteps\" />
+  </ItemGroup>
+
 </Project>
