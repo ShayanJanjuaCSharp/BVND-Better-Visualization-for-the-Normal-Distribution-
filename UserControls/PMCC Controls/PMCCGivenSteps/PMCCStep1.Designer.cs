@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             PMCC_TITLE = new Label();
             label1 = new Label();
             label2 = new Label();
@@ -39,8 +36,6 @@
             Confirm_Button = new Button();
             back = new Button();
             button2 = new Button();
-            chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            ((System.ComponentModel.ISupportInitialize)chart1).BeginInit();
             SuspendLayout();
             // 
             // PMCC_TITLE
@@ -142,28 +137,11 @@
             button2.Text = "Repeat";
             button2.UseVisualStyleBackColor = false;
             // 
-            // chart1
-            // 
-            chartArea1.Name = "ChartArea1";
-            chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            chart1.Legends.Add(legend1);
-            chart1.Location = new Point(961, 230);
-            chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            chart1.Series.Add(series1);
-            chart1.Size = new Size(300, 300);
-            chart1.TabIndex = 20;
-            chart1.Text = "chart1";
-            // 
             // PMCCStep1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkSlateGray;
-            Controls.Add(chart1);
             Controls.Add(button2);
             Controls.Add(back);
             Controls.Add(Confirm_Button);
@@ -174,7 +152,6 @@
             Controls.Add(PMCC_TITLE);
             Name = "PMCCStep1";
             Size = new Size(1280, 720);
-            ((System.ComponentModel.ISupportInitialize)chart1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -189,6 +166,5 @@
         private Button Confirm_Button;
         private Button back;
         private Button button2;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }
